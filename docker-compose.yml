@@ -1,0 +1,18 @@
+services:
+  myFirst:
+    build:
+      context: .
+      dockerfile: Dockerfile.first
+    image: first-image
+    #command: tail -F /dev/null
+    volumes:
+      - ./output/:/root/output/:rw
+  mySecond:
+    build:
+      context: .
+      dockerfile: Dockerfile.second
+    image: second-image
+    command: tail -F /dev/null
+    volumes:
+      - ./output/:/root/output/:rw
+

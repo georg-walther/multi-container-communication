@@ -1,0 +1,4 @@
+FROM freesurfer/freesurfer:7.3.2
+#COPY license /usr/local/freesurfer/.license
+COPY ./src /root/src
+ENTRYPOINT ["sh","/root/src/secondScript.sh"]

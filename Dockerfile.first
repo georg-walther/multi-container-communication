@@ -1,0 +1,4 @@
+FROM freesurfer/freesurfer:7.1.1
+# COPY license /usr/local/freesurfer/.license
+COPY ./src /root/src
+ENTRYPOINT ["sh","/root/src/firstScript.sh"]
